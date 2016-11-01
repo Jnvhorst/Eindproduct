@@ -1,0 +1,1073 @@
+                                                                                        /*csslint order-alphabetical:false,outline-none:false, universal-selector:false, box-model:false, qualified-headings: false, unique-headings:false, box-sizing:false, fallback-colors:false compatible-vendor-prefixes:false,*/
+
+                                                                                    * {
+                                                                                        font-family: 'nexa light';
+                                                                                        font-size: 1em;
+                                                                                    }
+
+                                                                                    html,
+                                                                                    body {
+                                                                                        margin: 0;
+                                                                                        padding: 0;
+                                                                                    }
+
+                                                                                    article,
+                                                                                    aside,
+                                                                                    details,
+                                                                                    figcaption,
+                                                                                    figure,
+                                                                                    footer,
+                                                                                    header,
+                                                                                    hgroup,
+                                                                                    main,
+                                                                                    menu,
+                                                                                    nav,
+                                                                                    section {
+                                                                                        display: block;
+                                                                                    }
+
+                                                                                    html {
+                                                                                        box-sizing: border-box;
+                                                                                    }
+
+                                                                                    html *,
+                                                                                    html *:before,
+                                                                                    html *:after {
+                                                                                        box-sizing: inherit;
+                                                                                    }
+                                                                                    /*
+===============================================
+HAMBURGERMENU
+===============================================
+*/
+
+                                                                                    .menu {
+                                                                                        display: flex;
+                                                                                    }
+
+                                                                                    .menu ul {
+                                                                                        background-color: #00c66d;
+                                                                                        bottom: 0;
+                                                                                        left: 0;
+                                                                                        list-style: none;
+                                                                                        margin: 0;
+                                                                                        position: fixed;
+                                                                                        right: 0;
+                                                                                        top: 0;
+                                                                                        width: 13em;
+                                                                                        z-index: 0;
+                                                                                    }
+
+                                                                                    .menu li {
+                                                                                        border-bottom: 1px solid white;
+                                                                                        clear: left;
+                                                                                        float: left;
+                                                                                        text-align: left;
+                                                                                        width: 9em;
+                                                                                    }
+
+                                                                                    .menu a {
+                                                                                        color: white;
+                                                                                        display: block;
+                                                                                        padding: 1em;
+                                                                                        text-decoration: none;
+                                                                                    }
+
+                                                                                    .menu a:hover {
+                                                                                        color: #606060;
+                                                                                        text-decoration: none;
+                                                                                    }
+
+                                                                                    .active {
+                                                                                        font-weight: bold;
+                                                                                        text-decoration: underline;
+                                                                                    }
+                                                                                    /*het menu-icoontje */
+
+                                                                                    .burger {
+                                                                                        /* verberg checkbox */
+                                                                                        display: none;
+                                                                                        position: absolute;
+                                                                                    }
+
+                                                                                    .burger +label {
+                                                                                        /* positioneer pannenkoeken */
+                                                                                        cursor: pointer;
+                                                                                        height: 50px;
+                                                                                        left: 30px;
+                                                                                        position: absolute;
+                                                                                        top: 30px;
+                                                                                        width: 50px;
+                                                                                        z-index: 2;
+                                                                                    }
+
+                                                                                    .burger +label:before {
+                                                                                        /* voeg pannenkoeken toe */
+                                                                                        content: "\2261";
+                                                                                        color: white;
+                                                                                        font-size: 3.2em;
+                                                                                        /*    font-size-adjust voor mozilla */
+                                                                                        font-size-adjust: .3;
+                                                                                        line-height: 0;
+                                                                                        padding: 0 .2em;
+                                                                                        position: relative;
+                                                                                        top: .06em;
+                                                                                    }
+                                                                                    /*het kruisje */
+
+                                                                                    .burger:checked + label:before {
+                                                                                        content: "\2715";
+                                                                                        font-size: 1.6em;
+                                                                                        color: white;
+                                                                                        /*    geen font-size-adjust */
+                                                                                        font-size-adjust: 0;
+                                                                                        /*    uitlijning van het kruisje */
+                                                                                        padding: 0 .38em;
+                                                                                        top: .06em;
+                                                                                    }
+                                                                                    /* Make the magic happen */
+
+                                                                                    .burger + label,
+                                                                                    section:first-of-type {
+                                                                                        transition: left 0.2s;
+                                                                                    }
+
+                                                                                    .burger:checked + label {
+                                                                                        left: 235px;
+                                                                                    }
+
+                                                                                    .burger:checked ~ section:first-of-type {
+                                                                                        box-shadow: 0 0 3px 3px rgba(90, 90, 90, 0.5);
+                                                                                        left: 200px;
+                                                                                    }
+                                                                                    /*
+===============================================
+HEADER
+===============================================
+*/
+
+                                                                                    header {
+                                                                                        background-color: #00c66d;
+                                                                                        display: flex;
+                                                                                        justify-content: space-between;
+                                                                                        height: 4em;
+                                                                                        left: 0;
+                                                                                        padding: 0 1em 0 45%;
+                                                                                        position: absolute;
+                                                                                        top: 0;
+                                                                                        width: 100%;
+                                                                                    }
+
+                                                                                    header a> img {
+                                                                                        height: 50px;
+                                                                                        margin-top: 0.5em;
+                                                                                        width: 50px;
+                                                                                    }
+
+                                                                                    header nav > ul {
+                                                                                        margin-left: auto;
+                                                                                        display: flex;
+                                                                                        flex-flow: row;
+                                                                                        list-style-type: none;
+                                                                                    }
+
+                                                                                    input[type=search] {
+                                                                                        margin-top: 1.25em;
+                                                                                        width: 7.5em;
+                                                                                        background-color: white;
+                                                                                        border-radius: 0.5em;
+                                                                                    }
+
+                                                                                    header li {
+                                                                                        margin: 0.5em;
+                                                                                    }
+
+                                                                                    header a {
+                                                                                        color: white;
+                                                                                        text-decoration: none;
+                                                                                    }
+
+                                                                                    .menuGroot {
+                                                                                        display: none;
+                                                                                    }
+                                                                                    /*
+===============================================
+SORTEREN / FILTEREN
+===============================================
+*/
+
+                                                                                    .login {
+                                                                                        top: 5em;
+                                                                                        position: absolute;
+                                                                                        color: white;
+                                                                                        display: flex;
+                                                                                        width: 100%;
+                                                                                        justify-content: center;
+                                                                                        font-size: 0.8em;
+                                                                                    }
+
+                                                                                    .sorteerfilter {
+                                                                                        width: 100%;
+                                                                                        height: 15em;
+                                                                                        margin-top: 2em;
+                                                                                        display: flex;
+                                                                                        justify-content: center;
+                                                                                        align-items: center;
+                                                                                        background-image: url('../images/DSCF0408.jpg');
+                                                                                        background-position: center;
+                                                                                        background-size: cover;
+                                                                                    }
+
+                                                                                    aside:first-child {
+                                                                                        background-color: #ff3268;
+                                                                                        border-radius: 0.5em 0 0 0.5em;
+                                                                                        color: white;
+                                                                                        height: 3em;
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                        margin: 0;
+                                                                                        padding-top: 0.2em;
+                                                                                        text-align: center;
+                                                                                        width: 40%;
+                                                                                        cursor: pointer;
+                                                                                        Box-shadow: inset 0 -.1875rem .0625rem #ca2b55;
+                                                                                    }
+
+                                                                                    aside:nth-child(2) {
+                                                                                        background-color: #2800a0;
+                                                                                        border-radius: 0 0.5em 0.5em 0;
+                                                                                        color: white;
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                        margin: 0;
+                                                                                        max-height: 3em;
+                                                                                        padding-top: 0.2em;
+                                                                                        text-align: center;
+                                                                                        width: 40%;
+                                                                                        cursor: pointer;
+                                                                                        Box-shadow: inset 0 -.1875rem .0625rem #120145;
+                                                                                    }
+
+                                                                                    .pushdown {
+                                                                                        position: absolute;
+                                                                                        top: 12.96em;
+                                                                                        border-radius: 0.5rem;
+                                                                                        display: flex;
+                                                                                        justify-content: center;
+                                                                                        width: 100%;
+                                                                                    }
+
+                                                                                    .pushdown div {
+                                                                                        border-bottom: 0.1em solid #f3e5d8;
+                                                                                        border-radius: 0.5rem;
+                                                                                        padding: 2em 0;
+                                                                                        background-color: #f6f6f6;
+                                                                                        display: flex;
+                                                                                        justify-content: center;
+                                                                                        width: 80%;
+                                                                                    }
+
+                                                                                    .pushdown ul {
+                                                                                        width: 50%;
+                                                                                        -webkit-padding-start: 0;
+                                                                                    }
+
+                                                                                    .pushdown li {
+                                                                                        display: flex;
+                                                                                        flex-direction: column;
+                                                                                        align-items: center;
+                                                                                        border-bottom: 1px solid #606060;
+                                                                                        margin-bottom: 1em;
+                                                                                    }
+
+                                                                                    .hidden {
+                                                                                        display: none!important;
+                                                                                    }
+
+                                                                                    fieldset {
+                                                                                        border: none;
+                                                                                    }
+
+                                                                                    .leeftijd {
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                    }
+
+                                                                                    .sorteergroot {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    .sorteergroot > div {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    .filtergroot > div {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    .filtergroot > form {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    .aanmaken {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    input[type=submit] {
+                                                                                        background-color: #00c66d;
+                                                                                        border: none;
+                                                                                        border-radius: .5em;
+                                                                                        box-shadow: inset 0 -.1875em .0625em #54B384;
+                                                                                        color: white;
+                                                                                        font-size: 1em;
+                                                                                        min-height: 2em;
+                                                                                        min-width: 10em;
+                                                                                        margin-top: 1em;
+                                                                                        align-self: center;
+                                                                                    }
+                                                                                    /*
+===============================================
+AANBEVOLEN
+===============================================
+*/
+
+                                                                                    main {
+                                                                                        width: 100%;
+                                                                                        height: 100%;
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                        justify-content: center;
+                                                                                        align-items: center;
+                                                                                        background-color: #f6f6f6;
+                                                                                    }
+
+                                                                                    main > section {
+                                                                                        border: none;
+                                                                                        background-image: none;
+                                                                                        display: flex;
+                                                                                        background-color: white;
+                                                                                        flex-flow: column;
+                                                                                        justify-content: center;
+                                                                                        align-items: center;
+                                                                                        width: 100%;
+                                                                                    }
+
+                                                                                    main section section section {
+                                                                                        padding: 0 1em;
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                        justify-content: space-between;
+                                                                                    }
+
+                                                                                    main > section:nth-child(2) section {
+                                                                                        display: flex;
+                                                                                        flex-flow: column;
+                                                                                    }
+
+                                                                                    main > section:nth-child(2) {
+                                                                                        background-color: #f6f6f6;
+                                                                                        height: 100%;
+                                                                                    }
+
+                                                                                    main h2 {
+                                                                                        margin-left: 1em;
+                                                                                        font-size: 1.5em;
+                                                                                        color: #00c66d;
+                                                                                    }
+
+                                                                                    main a > h2 {
+                                                                                        margin-bottom: 0.3em;
+                                                                                        color: #00c66d;
+                                                                                    }
+
+                                                                                    article {
+                                                                                        border: 1px solid #f6f6f6;
+                                                                                        padding-bottom: 0.5em;
+                                                                                        width: 19em;
+                                                                                        height: 100%;
+                                                                                        background-color: #f6f6f6;
+                                                                                        border-radius: 0.5rem;
+                                                                                        margin-bottom: 3em;
+                                                                                    }
+
+                                                                                    main > section:nth-child(2) article {
+                                                                                        background-color: white;
+                                                                                        border: white solid 1px;
+                                                                                    }
+
+                                                                                    article a > div {
+                                                                                        height: 10em;
+                                                                                        background-image: url(../images/Naamloos-1.png);
+                                                                                        background-position: center;
+                                                                                        border-radius: 0.5rem 0.5rem 0 0;
+                                                                                        width: 100%;
+                                                                                        background-size: cover;
+                                                                                    }
+
+                                                                                    article section {
+                                                                                        background-image: none;
+                                                                                    }
+
+                                                                                    a {
+                                                                                        color: #606060;
+                                                                                        text-decoration: none;
+                                                                                    }
+
+                                                                                    p {
+                                                                                        line-height: 1.3em;
+                                                                                    }
+
+                                                                                    main section section footer {
+                                                                                        margin-left: 2em;
+                                                                                        font-size: 0.8em;
+                                                                                        font-style: italic;
+                                                                                    }
+
+                                                                                    article > div:last-child {
+                                                                                        width: 60%;
+                                                                                        margin-left: 20%;
+                                                                                        display: flex;
+                                                                                        justify-content: space-between;
+                                                                                    }
+                                                                                    /*
+===============================================
+FOOTER
+===============================================
+*/
+
+                                                                                    footer ul {
+                                                                                        padding-left: 0;
+                                                                                        display: flex;
+                                                                                        flex-flow: row;
+                                                                                        flex-wrap: nowrap;
+                                                                                        justify-content: center;
+                                                                                        list-style-type: none;
+                                                                                    }
+
+                                                                                    footer ul li a {
+                                                                                        text-decoration: none;
+                                                                                        color: #606060;
+                                                                                        margin: 0.5em;
+                                                                                    }
+
+                                                                                    .overzichtpagina {
+                                                                                        background-color: white;
+                                                                                        left: 0;
+                                                                                        padding: 2em 0 0 0;
+                                                                                        position: relative;
+                                                                                        top: 0;
+                                                                                        z-index: 1;
+                                                                                        background-image: none;
+                                                                                        width: 100%;
+                                                                                        /* anders animeert chrome niet*/
+                                                                                    }
+
+                                                                                    i {
+                                                                                        cursor: pointer;
+                                                                                    }
+                                                                                    /*
+===============================================
+VERHALENPAGINA'S
+===============================================
+*/
+
+                                                                                    .vrolijkImg {
+                                                                                        background-image: url(../images/Tekengebied%201.png);
+                                                                                    }
+
+                                                                                    .vrolijk {
+                                                                                        background-image: url(../images/Tekengebied%201.png);
+                                                                                        left: 0;
+                                                                                        padding: 2em 0 0 0;
+                                                                                        position: relative;
+                                                                                        z-index: 1;
+                                                                                        width: 100%;
+                                                                                        height: 100%;
+                                                                                        background-size: cover;
+                                                                                        background-position: center;
+                                                                                        /* anders animeert chrome niet*/
+                                                                                    }
+
+                                                                                    .vrolijk main {
+                                                                                        margin-left: 5%;
+                                                                                        border-radius: 0.5rem;
+                                                                                        padding: 1em;
+                                                                                        display: flex;
+                                                                                        margin-top: 5em;
+                                                                                        background-color: #a4d5b7;
+                                                                                        width: 90%;
+                                                                                        height: auto;
+                                                                                    }
+
+                                                                                    .vrolijk main > section {
+                                                                                        background-color: #a4d5b7;
+                                                                                        width: 100%;
+                                                                                    }
+
+                                                                                    .vrolijk p {
+                                                                                        font-family: 'nexa bold'
+                                                                                    }
+
+                                                                                    .vrolijk h1 {
+                                                                                        font-family: 'Alba';
+                                                                                        font-size: 3em;
+                                                                                        letter-spacing: 3px;
+                                                                                        margin: 0;
+                                                                                    }
+
+                                                                                    .vrolijk footer {
+                                                                                        font-family: 'Alba';
+                                                                                        font-size: 0.9em;
+                                                                                        letter-spacing: 3px;
+                                                                                        font-style: italic;
+                                                                                    }
+
+                                                                                    .negatiefImg {
+                                                                                        background-image: url(../images/a5f0e255d5a3f8fa9df4d747d75314e4.jpg);
+                                                                                    }
+
+                                                                                    .negatief header {
+                                                                                        background-color: white;
+                                                                                    }
+
+                                                                                    .negatief header a {
+                                                                                        color: black;
+                                                                                    }
+
+                                                                                    .negburger .burger +label:before,
+                                                                                    .negburger .burger:checked + label:before {
+                                                                                        color: black;
+                                                                                    }
+
+                                                                                    .negburger ul {
+                                                                                        background-color: white;
+                                                                                    }
+
+                                                                                    .negburger li {
+                                                                                        border-bottom: 1px solid black;
+                                                                                    }
+
+                                                                                    .negburger a {
+                                                                                        color: black;
+                                                                                    }
+
+                                                                                    .negatief {
+                                                                                        left: 0;
+                                                                                        padding: 2em 0 0 0;
+                                                                                        position: relative;
+                                                                                        z-index: 1;
+                                                                                        width: 100%;
+                                                                                        min-height: 60em;
+                                                                                        background-color: black;
+                                                                                        /* anders animeert chrome niet*/
+                                                                                    }
+
+                                                                                    .negatief > div {
+                                                                                        background-image: url(../images/vormgeving11%20negatief%20mobiel.png);
+                                                                                        background-repeat: no-repeat;
+                                                                                        background-size: contain;
+                                                                                        background-position: center;
+                                                                                        position: absolute;
+                                                                                        top: 5em;
+                                                                                        width: 25em;
+                                                                                        left: 0;
+                                                                                        min-height: 50em;
+                                                                                        z-index: -2;
+                                                                                    }
+
+                                                                                    .negatiefAlt {
+                                                                                        left: 0;
+                                                                                        padding: 2em 0 0 0;
+                                                                                        position: relative;
+                                                                                        z-index: 1;
+                                                                                        width: 100%;
+                                                                                        min-height: 60em;
+                                                                                        background-color: black;
+                                                                                        /* anders animeert chrome niet*/
+                                                                                    }
+
+                                                                                    .negatiefAlt > div {
+                                                                                        background-image: url(../images/vormgeving11%20negatief%20mobiel%20alt.png);
+                                                                                        background-size: contain;
+                                                                                        background-position: center;
+                                                                                        position: absolute;
+                                                                                        top: 5em;
+                                                                                        left: 0;
+                                                                                        width: 100%;
+                                                                                        min-height: 50em;
+                                                                                        z-index: -2;
+                                                                                    }
+
+                                                                                    .negatiefAlt header {
+                                                                                        background-color: white;
+                                                                                    }
+
+                                                                                    .negatiefAlt header a {
+                                                                                        color: black;
+                                                                                    }
+
+                                                                                    .negatief button {
+                                                                                        position: absolute;
+                                                                                        top: 6em;
+                                                                                        right: 2.5em;
+                                                                                    }
+
+                                                                                    .negatief button:active,
+                                                                                    .negatiefAlt button:active {
+                                                                                        background-color: black;
+                                                                                        color: white;
+                                                                                        border: 1px solid white;
+                                                                                    }
+
+                                                                                    .negatiefAlt button {
+                                                                                        position: absolute;
+                                                                                        top: 6em;
+                                                                                        right: 2.5em;
+                                                                                    }
+
+                                                                                    .grappigImg {
+                                                                                        background-image: url(../images/XD_Face.png);
+                                                                                    }
+
+                                                                                    .grappig {
+                                                                                        background-color: white;
+                                                                                        left: 0;
+                                                                                        padding: 2em 0 0 0;
+                                                                                        position: relative;
+                                                                                        z-index: 1;
+                                                                                        width: 100%;
+                                                                                        height: 100%;
+                                                                                        /* anders animeert chrome niet*/
+                                                                                    }
+
+                                                                                    .grappig main {
+                                                                                        background-color: white;
+                                                                                        margin-left: 5%;
+                                                                                        border-radius: 0.5rem;
+                                                                                        padding: 1em;
+                                                                                        display: flex;
+                                                                                        margin-top: 5em;
+                                                                                        width: 90%;
+                                                                                        height: auto;
+                                                                                    }
+
+                                                                                    .grappig main > section {
+                                                                                        width: 100%;
+                                                                                    }
+
+                                                                                    .grappig p {
+                                                                                        font-family: 'nexa bold'
+                                                                                    }
+
+                                                                                    .grappig h1 {
+                                                                                        font-family: 'Gretoon Highlight';
+                                                                                        font-size: 3em;
+                                                                                        letter-spacing: 3px;
+                                                                                        margin: 0 0 0.5em 0;
+                                                                                    }
+
+                                                                                    .grappig footer {
+                                                                                        font-family: 'Alba';
+                                                                                        font-size: 0.9em;
+                                                                                        letter-spacing: 3px;
+                                                                                        font-style: italic;
+                                                                                    }
+
+                                                                                    @keyframes lol {
+                                                                                        0% {
+                                                                                            top: 0;
+                                                                                        }
+                                                                                        100% {
+                                                                                            top: 100vh;
+                                                                                        }
+                                                                                    }
+
+                                                                                    .lol {
+                                                                                        left: 5%;
+                                                                                        font-family: 'alba super';
+                                                                                        color: red;
+                                                                                        font-size: 2em;
+                                                                                        position: absolute;
+                                                                                        animation-name: lol;
+                                                                                        animation-duration: 2s;
+                                                                                        animation-iteration-count: infinite;
+                                                                                    }
+
+                                                                                    @keyframes HAHAHA {
+                                                                                        0% {
+                                                                                            top: 0;
+                                                                                        }
+                                                                                        100% {
+                                                                                            top: 100vh;
+                                                                                        }
+                                                                                    }
+
+                                                                                    .HAHAHA {
+                                                                                        right: 5%;
+                                                                                        font-family: 'alba super';
+                                                                                        color: yellow;
+                                                                                        font-size: 2em;
+                                                                                        position: absolute;
+                                                                                        animation-name: HAHAHA;
+                                                                                        animation-duration: 2s;
+                                                                                        animation-iteration-count: infinite;
+                                                                                    }
+
+                                                                                    @keyframes LMAO {
+                                                                                        0% {
+                                                                                            top: 0;
+                                                                                        }
+                                                                                        50% {
+                                                                                            transform: rotate(180deg);
+                                                                                        }
+                                                                                        100% {
+                                                                                            top: 100vh;
+                                                                                        }
+                                                                                    }
+
+                                                                                    .LMAO {
+                                                                                        right: 30%;
+                                                                                        font-family: 'alba super';
+                                                                                        color: blue;
+                                                                                        font-size: 2em;
+                                                                                        position: absolute;
+                                                                                        animation-name: LMAO;
+                                                                                        animation-duration: 2s;
+                                                                                        animation-iteration-count: infinite;
+                                                                                    }
+
+                                                                                    @keyframes XD {
+                                                                                        0% {
+                                                                                            top: 0;
+                                                                                            transform: rotate(90deg) scale(1.1, 1.1);
+                                                                                        }
+                                                                                        50% {
+                                                                                            transform: rotate(90deg) scale(2, 2);
+                                                                                        }
+                                                                                        100% {
+                                                                                            top: 100vh;
+                                                                                            transform: rotate(90deg) scale(3, 3);
+                                                                                        }
+                                                                                    }
+
+                                                                                    .XD {
+                                                                                        left: 25%;
+                                                                                        font-family: 'alba super';
+                                                                                        color: green;
+                                                                                        font-size: 2em;
+                                                                                        position: absolute;
+                                                                                        animation-name: XD;
+                                                                                        animation-duration: 2s;
+                                                                                        animation-iteration-count: infinite;
+                                                                                    }
+
+                                                                                    .drol > img {
+                                                                                        display: none;
+                                                                                    }
+
+                                                                                    .drol {
+                                                                                        display: none;
+                                                                                    }
+                                                                                    /*
+===============================================
+MEDIAQUERRY
+===============================================
+*/
+
+                                                                                    @media (min-width: 47.5em) {
+                                                                                        .menuGroot {
+                                                                                            display: flex;
+                                                                                        }
+                                                                                        .menu {
+                                                                                            display: none;
+                                                                                        }
+                                                                                        .burger +label {
+                                                                                            display: none;
+                                                                                        }
+                                                                                        header {
+                                                                                            padding: 0 1em;
+                                                                                        }
+                                                                                        main section:first-child > section {
+                                                                                            display: flex;
+                                                                                            justify-content: center;
+                                                                                            flex-direction: row;
+                                                                                            flex-wrap: wrap;
+                                                                                            width: 100%;
+                                                                                        }
+                                                                                        main section:nth-child(2) > section {
+                                                                                            display: flex;
+                                                                                            justify-content: space-around;
+                                                                                            flex-direction: row;
+                                                                                            flex-wrap: wrap;
+                                                                                            height: 100%;
+                                                                                            width: 100%;
+                                                                                        }
+                                                                                        article {
+                                                                                            margin-left: 3em;
+                                                                                            margin-right: 3em;
+                                                                                        }
+                                                                                        .login {
+                                                                                            top: 4em;
+                                                                                            font-size: 1em;
+                                                                                        }
+                                                                                        .negatief {
+                                                                                            left: 0;
+                                                                                            padding: 2em 0 0 0;
+                                                                                            position: relative;
+                                                                                            z-index: 1;
+                                                                                            width: 100%;
+                                                                                            min-height: 60em;
+                                                                                            background-color: black;
+                                                                                            /* anders animeert chrome niet*/
+                                                                                        }
+                                                                                        .negatief > div {
+                                                                                            background-image: url(../images/vormgeving11%20negatief%20pc.png);
+                                                                                            background-repeat: no-repeat;
+                                                                                            background-size: contain;
+                                                                                            background-position: center;
+                                                                                            position: absolute;
+                                                                                            top: 5em;
+                                                                                            width: 100%;
+                                                                                            left: 0;
+                                                                                            min-height: 50em;
+                                                                                            z-index: -2;
+                                                                                        }
+                                                                                        .negatief li {
+                                                                                            border-bottom: none;
+                                                                                        }
+                                                                                        .negatiefAlt {
+                                                                                            left: 0;
+                                                                                            padding: 2em 0 0 0;
+                                                                                            position: relative;
+                                                                                            z-index: 1;
+                                                                                            width: 100%;
+                                                                                            min-height: 60em;
+                                                                                            background-color: black;
+                                                                                            /* anders animeert chrome niet*/
+                                                                                        }
+                                                                                        .negatiefAlt > div {
+                                                                                            background-image: url(../images/vormgeving11%20negatief%20alt.png);
+                                                                                            background-repeat: no-repeat;
+                                                                                            background-size: contain;
+                                                                                            background-position: center;
+                                                                                            position: absolute;
+                                                                                            top: 5em;
+                                                                                            width: 100%;
+                                                                                            left: 0;
+                                                                                            min-height: 50em;
+                                                                                            z-index: -2;
+                                                                                        }
+                                                                                        .negatiefAlt li {
+                                                                                            border-bottom: none;
+                                                                                        }
+                                                                                        .grappig {
+                                                                                            left: 0;
+                                                                                            padding: 2em 0 0 0;
+                                                                                            position: relative;
+                                                                                            top: 0;
+                                                                                            z-index: 1;
+                                                                                            width: 100%;
+                                                                                            background-position: center;
+                                                                                        }
+                                                                                        .grappig main {
+                                                                                            margin-left: 20%;
+                                                                                            width: 60%;
+                                                                                        }
+                                                                                        @keyframes drol {
+                                                                                            0% {
+                                                                                                top: 0;
+                                                                                                transform: rotate(0deg);
+                                                                                            }
+                                                                                            25% {
+                                                                                                transform: rotate(90deg);
+                                                                                            }
+                                                                                            50% {
+                                                                                                transform: rotate(180deg);
+                                                                                            }
+                                                                                            100% {
+                                                                                                top: 100vh;
+                                                                                                transform: rotate(270deg);
+                                                                                            }
+                                                                                        }
+                                                                                        .drol {
+                                                                                            display: block;
+                                                                                            left: 5%;
+                                                                                            font-family: 'alba super';
+                                                                                            color: green;
+                                                                                            font-size: 2em;
+                                                                                            position: absolute;
+                                                                                            animation-name: drol;
+                                                                                            animation-duration: 2s;
+                                                                                            animation-iteration-count: infinite;
+                                                                                        }
+                                                                                        .drol > img {
+                                                                                            display: block;
+                                                                                            max-width: 2.5em;
+                                                                                            max-height: 2.5em;
+                                                                                        }
+                                                                                        .lol {
+                                                                                            left: 45%;
+                                                                                        }
+                                                                                        @media (min-width: 60em) {
+                                                                                            .sorteerfilter {
+                                                                                                height: 20em;
+                                                                                                justify-content: space-around;
+                                                                                            }
+                                                                                            .sorteergroot {
+                                                                                                display: flex;
+                                                                                                flex-flow: row;
+                                                                                                width: 24em;
+                                                                                                flex-wrap: wrap;
+                                                                                                height: 15em;
+                                                                                                align-content: space-around;
+                                                                                                background: none;
+                                                                                                Box-shadow: none;
+                                                                                            }
+                                                                                            .sorteergroot > div {
+                                                                                                background-color: #2800a0;
+                                                                                                border-radius: 0.5em;
+                                                                                                color: white;
+                                                                                                display: flex;
+                                                                                                flex-flow: column;
+                                                                                                margin: 0 1em 0 1em;
+                                                                                                height: 3em;
+                                                                                                text-align: center;
+                                                                                                width: 10em;
+                                                                                                padding: 1.2em 0 0 0;
+                                                                                                cursor: pointer;
+                                                                                                Box-shadow: inset 0 -.1875rem .0625rem #120145;
+                                                                                            }
+                                                                                            aside:nth-child(2) {
+                                                                                                display: none;
+                                                                                            }
+                                                                                            aside:first-child {
+                                                                                                display: none;
+                                                                                            }
+                                                                                            .filtergroot {
+                                                                                                background-color: rgba(246, 246, 246, 0.9);
+                                                                                                width: 30em;
+                                                                                                height: 15em;
+                                                                                                border-radius: 0.5em;
+                                                                                                display: flex;
+                                                                                                flex-direction: column;
+                                                                                                justify-content: space-between;
+                                                                                            }
+                                                                                            .filtergroot > div {
+                                                                                                background-color: #ff3268;
+                                                                                                border-radius: 0.5em 0.5em 0 0;
+                                                                                                color: white;
+                                                                                                height: 3em;
+                                                                                                display: flex;
+                                                                                                flex-flow: column;
+                                                                                                margin: 0;
+                                                                                                text-align: center;
+                                                                                                width: 100%;
+                                                                                                cursor: pointer;
+                                                                                                padding-top: 1.2em;
+                                                                                            }
+                                                                                            .filtergroot > form {
+                                                                                                margin-top: 1em;
+                                                                                                display: flex;
+                                                                                                flex-flow: column;
+                                                                                                width: 10em;
+                                                                                                justify-content: space-around;
+                                                                                                flex-wrap: wrap;
+                                                                                                height: 10em;
+                                                                                            }
+                                                                                            input[type=submit] {
+                                                                                                display: inline-block;
+                                                                                                background-color: #00c66d;
+                                                                                                border: none;
+                                                                                                border-radius: .5em;
+                                                                                                box-shadow: inset 0 -.1875em .0625em #54B384;
+                                                                                                color: white;
+                                                                                                font-size: 1em;
+                                                                                                min-height: 2em;
+                                                                                                min-width: 10em;
+                                                                                                align-self: center;
+                                                                                                margin-bottom: 1em;
+                                                                                            }
+                                                                                            .aanmaken {
+                                                                                                display: block;
+                                                                                            }
+                                                                                        }
+                                                                                        @media (min-width: 40em) {
+                                                                                            .vrolijk main > section {
+                                                                                                background-color: #a4d5b7;
+                                                                                                width: 80%;
+                                                                                            }
+                                                                                        }
+                                                                                        @media (min-width:63.125em) {
+                                                                                            .vrolijk {
+                                                                                                left: 0;
+                                                                                                padding: 2em 0 0 0;
+                                                                                                position: relative;
+                                                                                                top: 0;
+                                                                                                z-index: 1;
+                                                                                                width: 100%;
+                                                                                                background-position: center;
+                                                                                            }
+                                                                                            .vrolijk main {
+                                                                                                margin-left: 5%;
+                                                                                                border-radius: 0.5rem;
+                                                                                                padding: 1em;
+                                                                                                display: flex;
+                                                                                                margin-top: 5em;
+                                                                                                margin-bottom: 10em;
+                                                                                                background-color: #a4d5b7;
+                                                                                                width: 90%;
+                                                                                            }
+                                                                                            .vrolijk main > section {
+                                                                                                background-color: #a4d5b7;
+                                                                                                width: 100%;
+                                                                                                display: flex;
+                                                                                                flex-flow: row;
+                                                                                                flex-wrap: nowrap;
+                                                                                                justify-content: space-around;
+                                                                                            }
+                                                                                            .vrolijk p {
+                                                                                                align-self: flex-start;
+                                                                                                width: 20em;
+                                                                                            }
+                                                                                            .grappig {
+                                                                                                left: 0;
+                                                                                                padding: 2em 0 0 0;
+                                                                                                position: relative;
+                                                                                                top: 0;
+                                                                                                z-index: 1;
+                                                                                                width: 100%;
+                                                                                                background-position: center;
+                                                                                            }
+                                                                                            .grappig main {
+                                                                                                margin-left: 20%;
+                                                                                                width: 60%;
+                                                                                            }
+                                                                                        }
+                                                                                        @media (min-width:71.125em) {
+                                                                                            .vrolijk {
+                                                                                                left: 0;
+                                                                                                padding: 2em 0 0 0;
+                                                                                                position: relative;
+                                                                                                top: 0;
+                                                                                                z-index: 1;
+                                                                                                width: 100%;
+                                                                                                background-position: center;
+                                                                                            }
+                                                                                            .vrolijk main {
+                                                                                                margin-left: 20%;
+                                                                                                width: 60%;
+                                                                                            }
+                                                                                            .grappig {
+                                                                                                left: 0;
+                                                                                                padding: 2em 0 0 0;
+                                                                                                position: relative;
+                                                                                                top: 0;
+                                                                                                z-index: 1;
+                                                                                                width: 100%;
+                                                                                                background-position: center;
+                                                                                            }
+                                                                                            .grappig main {
+                                                                                                margin-left: 30%;
+                                                                                                width: 40%;
+                                                                                            }
+                                                                                        }

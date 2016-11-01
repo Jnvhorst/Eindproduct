@@ -1,0 +1,267 @@
+/*csslint order-alphabetical:false,outline-none:false, universal-selector:false, box-model:false, qualified-headings: false, unique-headings:false, box-sizing:false, fallback-colors:false compatible-vendor-prefixes:false,*/
+
+body {
+    background-color: #00c66d;
+    font-family: 'nexa light';
+}
+
+h1 {
+    color: white;
+    font-size: 1.8em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: -0.25em;
+    margin-top: 0;
+}
+
+.login {
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'nexa bold';
+}
+
+input[type=text]:valid,
+input[type=password]:valid,
+input[type=number]:valid,
+input[type=email]:valid {
+    color: #1D9E00;
+    border: 2px solid #1D9E00;
+}
+
+form[action="Inlog.html"] input[type=text],
+input[type=email],
+input[type=number],
+input[type=password] {
+    margin-top: 0.5em;
+    font-size: 1.3em;
+    border-radius: 0.75em;
+    padding-left: 0.2em;
+    box-sizing: border-box;
+    width: 7em;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}
+
+form[action="Inlog.html"] input[type=text] form[action="Overzichtpagina.html"] input[type=text]:valid {
+    color: #1D9E00;
+    border: 2px solid #1D9E00;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 0.75em;
+    padding-left: 0.2em;
+    box-sizing: border-box;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+}
+
+form[action="Overzichtpagina.html"] input[type=text] {
+    font-size: 1em;
+    width: 12.5em;
+    height: 3em;
+    padding: 0 0.7em;
+    border-radius: 0.75em;
+    border: none;
+    margin-top: 1em;
+}
+
+form[action="Inlog.html"] input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=email]:focus {
+    /*transform: scale(2, 1.0);*/
+    width: 10em;
+}
+
+form[action="Overzichtpagina.html"] input[type=password]:valid {
+    color: #1D9E00;
+    border: 2px solid #1D9E00;
+}
+
+form[action="Overzichtpagina.html"] input[type=password] {
+    font-size: 1em;
+    width: 12.5em;
+    height: 3em;
+    padding: 0 0.7em;
+    border-radius: 0.75em;
+    border: none;
+    margin-top: 1em;
+}
+
+form[action="Overzichtpagina.html"]>label {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+form[action="Overzichtpagina.html"] input[type=checkbox] {
+    margin-top: -.075em;
+    border-radius: .75em;
+}
+
+form[action="Overzichtpagina.html"] label:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+fieldset {
+    align-items: center;
+    border: 0;
+    /*color: white;*/
+    display: flex;
+    flex-flow: column;
+}
+
+form {
+    align-items: center;
+    border: 0;
+    border-radius: 0.75em;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+}
+
+form:valid {
+    color: #00c66d
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+}
+
+form:valid > input[type=submit] {
+    background-color: #ff3268;
+    border: none;
+    border-radius: .5em;
+    box-shadow: inset 0 -.1875em .0625em #ca2b55;
+    color: white;
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    min-height: 3em;
+    min-width: 10em;
+}
+
+form:invalid > input[type=submit] {
+    background-color: #7C7C7C;
+    border: none;
+    border-radius: .5em;
+    box-shadow: inset 0 -.1875em .0625em #202020;
+    color: white;
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    min-height: 3em;
+    min-width: 10em;
+    width: 7em;
+}
+
+form:invalid > input[type=submit]:hover {
+    transform: none;
+    cursor: inherit;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    color: black;
+    margin-top: 0.5em;
+    font-size: 1.25em;
+    line-height: 0.7;
+}
+
+section a {
+    color: black;
+    text-decoration: none;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    color: white;
+    margin-top: 0.5em;
+    font-size: 1.25em;
+    line-height: 0.7;
+}
+
+span a {
+    color: white;
+    margin: 1em 0;
+    text-decoration: none;
+}
+
+span a:last-child {
+    text-decoration: underline;
+}
+
+form section {
+    background-color: white;
+    border-radius: 0.75em;
+    padding: 1em 0 0.5em 0;
+    width: 15em;
+    height: 8em;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.check input {
+    margin-right: 1em;
+}
+
+@media (min-width: 550px) {
+    form[action="Inlog.html"] input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=password] {
+        border-radius: 0.75em;
+        padding-left: 0.2em;
+        box-sizing: border-box;
+        width: 10em;
+    }
+    form[action="inlog.html"] input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=number]:focus,
+    input[type=email]:focus {
+        width: 15.9em;
+    }
+    h1 {
+        font-size: 5em;
+    }
+    .aanmaken {
+        margin-top: 1.5em;
+    }
+    form section {
+        padding: 1em;
+        width: 23em;
+    }
+    fieldset {
+        width: 90%;
+    }
+    .login {
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+    }
+}
